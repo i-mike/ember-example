@@ -6,6 +6,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('decisions', function() {
+    this.route('show', {
+      path: ':decision_id'
+    });
+  });
 });
 
 export default Router;
